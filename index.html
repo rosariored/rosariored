@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu red de confianza - Red Rosario</title>
+  <link rel="icon" href="favicon.ico.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('fondo.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.8);
+      max-width: 90%;
+    }
+
+    h1 {
+      font-size: 52px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: white;
+      text-shadow: 3px 3px 6px #000;
+    }
+
+    .bonus-text {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      color: #ff00ff;
+      font-weight: bold;
+    }
+
+    @keyframes pulso {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 20px #25D366; }
+      50% { transform: scale(1.07); box-shadow: 0 0 40px #25D366; }
+    }
+
+    .button-whatsapp {
+      margin-top: 10px;
+      background-color: #25D366;
+      color: white;
+      padding: 22px 45px;
+      border: 4px double white;
+      border-radius: 40px;
+      font-size: 26px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      animation: pulso 1.4s infinite ease-in-out;
+      transition: all 0.3s ease;
+    }
+
+    .button-whatsapp:hover {
+      background-color: #1eb25a;
+      transform: scale(1.1);
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 14px;
+      color: #fff;
+      text-shadow: 1px 1px 2px #000;
+    }
+  </style>
+  
+</head>
+<body>
+  <h1</h1>
+   </a>
+  <img src="logo.png" alt="Logo redrosario" style="width: 280px; margin-top: 0px; margin-bottom:-45px;">
+  <div class="overlay">
+     <a class="button-whatsapp" href="https://api.whatsapp.com/send?phone=+5491162572854&text=QUIERO%20MI%20BONO%20%F0%9F%94%A5" target="_blank" onclick="fbq('track', 'Contact');">
+     WHATSAPP 💬
+    </a>
+    <p class="bonus-text">🔥Escribinos y reclamá tu bono🔥</p>
+    <p class="highlight">Minimo de carga $1000 y pagos las 24hs</p>
+    <p style="margin-top: 10px;">Red Rosario – La mejor red 💸</p>
+   
+  </div>
+  <div class="footer">RULETA EN VIVO - SLOTS - APUESTAS</div>
+  <div id="mensajeFlotante" style="
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: sans-serif;
+  z-index: 9999;
+  animation: fadeInOut 6s infinite;
+">
+  María ganó $157.000 hace 1h
+</div>
+
+<script>
+  const mensajes = [
+    "María ganó $157.000 hace 1h",
+    "Juan María ganó $72.600 hace 10 minutos",
+    "Bautista ganó $307.000 hace 3hs",
+    "Raúl ganó $23.400 hace 2 minutos"
+  ];
+
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % mensajes.length;
+    document.getElementById("mensajeFlotante").textContent = mensajes[index];
+  }, 6000);
+</script>
+
+<style>
+  @keyframes fadeInOut {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+</style>
+</body>
+</html>
